@@ -3,6 +3,7 @@ DROP FUNCTION IF EXISTS divide_float;
 DELIMITER //
 CREATE FUNCTION divide_float(dividend FLOAT, divisor FLOAT)
 RETURNS FLOAT
+DETERMINISTIC
 BEGIN
     DECLARE result FLOAT;
     IF divisor = 0 THEN
